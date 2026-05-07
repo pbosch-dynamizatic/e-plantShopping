@@ -274,7 +274,23 @@ function ProductList({ onHomeClick }) {
             </div>
             {!showCart ? (
                 <div className="product-grid">
-
+                    {plantsArray.map((categoria) => (
+                        <div>
+                            <h1>
+                                {categoria.category}
+                            </h1>
+                            <div>
+                                {categoria.plants.map((planta) => (
+                                    <div>
+                                        <h2>{planta.name}</h2>
+                                        <img src={planta.image} alt="" />
+                                        <span>{planta.cost}</span>
+                                        <span>{planta.description}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
 
                 </div>
             ) : (
