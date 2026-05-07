@@ -283,7 +283,7 @@ function ProductList({ onHomeClick }) {
                                 {categoria.plants.map((planta) => (
                                     <div>
                                         <h2>{planta.name}</h2>
-                                        <img src={planta.image} alt="" />
+                                        <img height={128} src={planta.image} alt="" />
                                         <span>{planta.cost}</span>
                                         <span>{planta.description}</span>
                                     </div>
