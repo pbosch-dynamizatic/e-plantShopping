@@ -245,12 +245,12 @@ function ProductList({ onHomeClick }) {
         textDecoration: 'none',
     }
 
-    useEffect(() => {
-        const cart = useSelector(state => state.cart.items);
-        cart.forEach(item => {
-            handleAddToCart(plantsArray.find((plant) => plant.name === item.name))
-        });
-    }, []);
+    // useEffect(() => {
+    //     const cart = useSelector(state => state.cart.items);
+    //     cart.forEach(item => {
+    //         handleAddToCart(plantsArray.find((plant) => plant.name === item.name))
+    //     });
+    // }, []);
 
     const calculateTotalQuantity = () => { return CartItems ? CartItems.reduce((total, item) => total + item.quantity, 0) : 0; };
 
